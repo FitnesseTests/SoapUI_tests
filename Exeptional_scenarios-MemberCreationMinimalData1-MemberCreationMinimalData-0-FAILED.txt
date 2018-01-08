@@ -1,0 +1,55 @@
+Status: FAILED
+Time Taken: 1051
+Size: 378
+Timestamp: Mon Jan 08 16:42:19 EET 2018
+TestStep: MemberCreationMinimalData
+
+----------------- Messages ------------------------------
+[familyName] XPathContains comparison failed for path [//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]], expecting [HAREs], actual was [HARE]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://api.avios.com
+Method: POST
+StatusCode: 200
+URL: https://api.avios.com/test/v3/memberships?api_key=3vy7tdm6tts5su8b8wfd6v4b
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [api.avios.com]
+Accept-Encoding: [gzip,deflate]
+x-forwarded-for: [111.111.111.111]
+Content-Length: [276]
+Content-Type: [application/json]
+
+POST https://api.avios.com/test/v3/memberships?api_key=3vy7tdm6tts5su8b8wfd6v4b HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+x-forwarded-for: 111.111.111.111
+Content-Length: 276
+Host: api.avios.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+
+---------------- Response --------------------------
+transfer-encoding: [chunked]
+Server: [Mashery Proxy]
+X-Content-Type-Options: [nosniff]
+Connection: [keep-alive]
+Pragma: [no-cache]
+X-Mashery-Message-ID: [60ae21a9-8b2c-4c6d-9e00-2c50b088ef89]
+X-Application-Context: [REGISTRATIONBSV3:test:10080]
+Date: [Mon, 08 Jan 2018 14:42:20 GMT]
+X-Frame-Options: [DENY]
+Strict-Transport-Security: [max-age=31536000; includeSubDomains]
+Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+Set-Cookie: [JSESSIONID=C3ACA45432B881D1CE9B87FCBC376FF9.jvm_avios0_caravaggio; Path=/registration-bs-3.1/; HttpOnly, TS01f29f44=01af671662d5151b7d82461dd085432789e2e2a1068c07213f804079a5bbb867d62ae30ff0; Path=/, TS0158aa27=01af6716628ecd3d52227ab013a9ceb0daae2ab9703621388cbd83f17e6ade542f089353c4d2eaafb687626fc5a268767bad55e22d; path=/registration-bs-3.1/]
+Expires: [0]
+#status#: [HTTP/1.1 200 OK]
+X-XSS-Protection: [1; mode=block]
+Content-Type: [application/json;charset=UTF-8]
+
+{"membershipIdentifier":"3081471030696719","membershipStatus":"ACTIVE","member":{"person":{"name":{"firstName":"MARK","familyName":"HARE"},"gender":"NOT_KNOWN","locale":{"languageCode":"EN"},"emailAddresses":{"preferredEmailAddress":{"email":"OSCAR.K@AVIOS.COM"}},"marketingPreference":[{"campaignType":"TRAVEL_OFFERS","communicationChannel":"POSTAL"}],"profileStatus":"FULL"}}}

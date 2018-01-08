@@ -1,0 +1,101 @@
+2018-01-08 16:42:10,555 WARN  [SoapUI] Missing folder [/Users/Shared/Jenkins/Home/workspace/SoapUI_tests/bin/ext] for external libraries
+2018-01-08 16:42:10,556 INFO  [DefaultSoapUICore] Creating new settings at [/Users/Shared/Jenkins/soapui-settings.xml]
+2018-01-08 16:42:11,893 INFO  [PluginManager] 0 plugins loaded in 4 ms
+2018-01-08 16:42:11,894 INFO  [DefaultSoapUICore] All plugins loaded
+2018-01-08 16:42:13,730 INFO  [WsdlProject] Loaded project from [file:/Users/Shared/Jenkins/Home/workspace/SoapUI_tests/bin/simple-test-soapui-project.xml]
+2018-01-08 16:42:13,747 INFO  [SoapUITestCaseRunner] Setting project property [message] to [Hello World!]
+2018-01-08 16:42:13,753 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [joinProgramme]
+2018-01-08 16:42:13,756 INFO  [SoapUITestCaseRunner] Running Project [joinProgramme], runType = SEQUENTIAL
+2018-01-08 16:42:13,787 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [MemberCreationMinimalData1]
+2018-01-08 16:42:13,820 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:16,887 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:17,441 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:17,441 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:17,441 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:17,442 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:17,444 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [MemberCreationMinimalData1], time taken: 2262ms, status: FINISHED
+2018-01-08 16:42:17,450 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Copy of MemberCreationMinimalData2]
+2018-01-08 16:42:17,450 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:18,538 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:18,573 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:18,573 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:18,573 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:18,573 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:18,573 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:18,574 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Copy of MemberCreationMinimalData2], time taken: 1035ms, status: FINISHED
+2018-01-08 16:42:18,578 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Copy of Copy of MemberCreationMinimalData3]
+2018-01-08 16:42:18,578 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:19,761 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:19,800 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:19,804 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:19,805 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:19,806 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:19,811 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Copy of Copy of MemberCreationMinimalData3], time taken: 1157ms, status: FINISHED
+2018-01-08 16:42:19,826 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [MemberCreationMinimalData1]
+2018-01-08 16:42:19,831 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:20,928 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:20,964 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:20,964 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:20,964 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status FAILED
+2018-01-08 16:42:20,965 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> XPathContains comparison failed for path [//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]], expecting [HAREs], actual was [HARE]
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:20,965 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:20,966 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:20,966 ERROR [SoapUITestCaseRunner] MemberCreationMinimalData failed, exporting to [/Users/Shared/Jenkins/Home/workspace/SoapUI_tests/bin/Exeptional_scenarios-MemberCreationMinimalData1-MemberCreationMinimalData-0-FAILED.txt]
+2018-01-08 16:42:20,979 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [MemberCreationMinimalData1], time taken: 1051ms, status: FAILED
+2018-01-08 16:42:20,983 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Copy of MemberCreationMinimalData2]
+2018-01-08 16:42:20,983 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:22,066 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:22,088 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:22,088 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:22,088 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:22,089 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:22,089 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status VALID
+2018-01-08 16:42:22,089 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:22,089 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:22,089 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:22,090 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:22,090 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:22,090 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:22,090 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Copy of MemberCreationMinimalData2], time taken: 1051ms, status: FINISHED
+2018-01-08 16:42:22,096 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Copy of Copy of MemberCreationMinimalData3]
+2018-01-08 16:42:22,096 INFO  [SoapUITestCaseRunner] running step [MemberCreationMinimalData]
+2018-01-08 16:42:23,004 INFO  [log] [HTTP/1.1 200 OK]
+2018-01-08 16:42:23,048 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+2018-01-08 16:42:23,048 INFO  [SoapUITestCaseRunner] Assertion [membershipIdentifier] has status VALID
+2018-01-08 16:42:23,048 INFO  [SoapUITestCaseRunner] Assertion [membershipStatus] has status VALID
+2018-01-08 16:42:23,048 INFO  [SoapUITestCaseRunner] Assertion [name] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [familyName] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [gender] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [languageCode] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [email] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [campaignType] has status VALID
+2018-01-08 16:42:23,049 INFO  [SoapUITestCaseRunner] Assertion [communicationChannel] has status VALID
+2018-01-08 16:42:23,051 INFO  [SoapUITestCaseRunner] Assertion [profileStatus] has status VALID
+2018-01-08 16:42:23,052 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Copy of Copy of MemberCreationMinimalData3], time taken: 878ms, status: FINISHED
+2018-01-08 16:42:23,053 INFO  [SoapUITestCaseRunner] Project [joinProgramme] finished with status [FAILED] in 9290ms

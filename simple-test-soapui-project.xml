@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2993d077-a94f-427b-abac-689b7eebfb2b" activeEnvironment="Default" name="joinProgramme" resourceRoot="" soapui-version="4.6.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:RestService" id="6216bddd-195a-454b-bbab-163809eb2e38" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.avios.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>https://api.avios.com</con:endpoint>
+        </con:endpoints>
+        <con:resource name="Memberships" path="/test/v3/memberships" id="7e3b5958-11a0-4e41-bac7-bc8786eb1bc7">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>api_key</con:name>
+                    <con:value>3vy7tdm6tts5su8b8wfd6v4b</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>3vy7tdm6tts5su8b8wfd6v4b</con:default>
+                    <con:path xsi:nil="true"/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="Memberships 1" id="f68a4d22-6d50-47a3-b282-48ca310d669c" method="POST">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:mem="https://api.avios.com/test/v3/memberships">mem:Response</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+                    <con:status>400 503</con:status>
+                    <con:params/>
+                    <con:element xmlns:mem="https://api.avios.com/test/v3/memberships">mem:Fault</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>https://api.avios.com</con:endpoint>
+                    <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                    <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                    <con:credentials>
+                        <con:authType>No Authorization</con:authType>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters>
+                        <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>api_key</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:testSuite id="2eed3948-c942-4a2b-9a5f-62f28916e2e1" name="Functional Scenarios">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="75edf844-f3a9-4ed2-bc3f-63a549a54027" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="MemberCreationMinimalData1" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData" id="f605c0ac-750d-4fe7-aabb-25011b5aaf0b">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HARE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of MemberCreationMinimalData2" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HARE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase><con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Copy of MemberCreationMinimalData3" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HARE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase><con:properties/>
+    </con:testSuite>
+    <con:testSuite name="Exeptional scenarios">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="MemberCreationMinimalData1" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HAREs</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of MemberCreationMinimalData2" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HARE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase><con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of Copy of MemberCreationMinimalData3" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+            <con:settings/>
+            <con:testStep type="restrequest" name="MemberCreationMinimalData">
+                <con:settings/>
+                <con:config service="https://api.avios.com" resourcePath="/test/v3/memberships" methodName="Memberships 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="MemberCreationMinimalData" id="2387a8dd-76d7-4371-b301-cd98d39af57f" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="x-forwarded-for" value="111.111.111.111" xmlns="http://eviware.com/soapui/config"/></con:setting>
+                        </con:settings>
+                        <con:endpoint>https://api.avios.com</con:endpoint>
+                        <con:request>{
+   "member": {
+      "person": {
+         "name": {
+             "firstName": "MARK",
+             "familyName": "HARE"
+       },
+   "emailAddresses": {
+   "preferredEmailAddress": {
+   "email": "oscar.k@avios.com"
+               }
+             }	
+          }
+       }
+    }</con:request>
+                        <con:originalUri>https://api.avios.com/test/v3/memberships</con:originalUri>
+                        <con:assertion type="GroovyScriptAssertion" id="ad42869c-dac6-4428-9d39-ae619b583eee" name="Script Assertion">
+                            <con:configuration>
+                                <scriptText>def headers =  messageExchange.getResponseHeaders()
+log.info headers["#status#"]
+assert ['HTTP/1.1 200 OK'] == headers["#status#"]</scriptText>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="c4307a94-e17f-4597-a25c-4bf1693aa8f9" name="membershipIdentifier">
+                            <con:configuration>
+                                <path>exists(//*:membershipIdentifier[1])</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="membershipStatus">
+                            <con:configuration>
+                                <path>//*:membershipStatus[1]</path>
+                                <content>ACTIVE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="name">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:firstName</path>
+                                <content>MARK</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="familyName">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]</path>
+                                <content>HARE</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="gender">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:gender[1]</path>
+                                <content>NOT_KNOWN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="languageCode">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:locale[1]/*:languageCode</path>
+                                <content>EN</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="email">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email</path>
+                                <content>OSCAR.K@AVIOS.COM</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="campaignType">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]</path>
+                                <content>TRAVEL_OFFERS</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="communicationChannel">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]</path>
+                                <content>POSTAL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XPath Match" id="74a7a961-2d67-4e09-8ba1-24471b7804bb" name="profileStatus">
+                            <con:configuration>
+                                <path>//*:member[1]/*:person/*:profileStatus[1]</path>
+                                <content>FULL</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+                            <entry key="api_key" value="3vy7tdm6tts5su8b8wfd6v4b" xmlns="http://eviware.com/soapui/config"/>
+                        </con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>api_key</con:entry>
+                        </con:parameterOrder>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase><con:properties/>
+    </con:testSuite><con:properties/>
+    <con:wssContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+    <con:sensitiveInformation/>
+</con:soapui-project>

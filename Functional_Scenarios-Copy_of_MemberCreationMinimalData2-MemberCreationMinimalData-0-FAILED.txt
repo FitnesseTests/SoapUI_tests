@@ -1,0 +1,70 @@
+Status: FAILED
+Time Taken: 1567
+Size: 159
+Timestamp: Mon Jan 08 16:41:30 EET 2018
+TestStep: MemberCreationMinimalData
+
+----------------- Messages ------------------------------
+[Script Assertion] assert ['HTTP/1.1 200 OK'] == headers["#status#"]
+                           |  |      |
+                           |  |      [HTTP/1.1 503 Service Unavailable]
+                           |  [transfer-encoding:[chunked], Server:[Mashery Proxy], X-Content-Type-Options:[nosniff], Connection:[keep-alive], Pragma:[no-cache], X-Mashery-Message-ID:[348ce17a-da7f-4b54-b920-d22a9703f443], X-Application-Context:[REGISTRATIONBSV3:test:10080], Date:[Mon, 08 Jan 2018 14:41:31 GMT], X-Frame-Options:[DENY], Strict-Transport-Security:[max-age=31536000; includeSubDomains], Cache-Control:[no-cache, no-store, max-age=0, must-revalidate], X-Cnection:[close], Set-Cookie:[JSESSIONID=C3D57C48F92F2862065AC2BFF54A8AE4.jvm_avios0_caravaggio; Path=/registration-bs-3.1/; HttpOnly, TS01f29f44=01af67166242c3a0b92c5a9a895ba3c6ffdc92239c512c11e8138e075df09a908ead232476; Path=/, TS0158aa27=01af671662e2a9a31247e716c4d9055d1da278aafdbe5760865a57b6554be1a8042fbcb8332e18e660c42f8bd73f68380dd1a22827; path=/registration-bs-3.1/], Expires:[0], #status#:[HTTP/1.1 503 Service Unavailable], X-XSS-Protection:[1; mode=block], Content-Type:[application/json;charset=UTF-8]]
+                           false
+[membershipIdentifier] XPathContains comparison failed for path [exists(//*:membershipIdentifier[1])], expecting [true], actual was [false]
+[membershipStatus] XPathContains assertion failed for path [//*:membershipStatus[1]] : Exception:Missing content for xpath [//*:membershipStatus[1]] in Response
+[name] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:name[1]/*:firstName] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:name[1]/*:firstName] in Response
+[familyName] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:name[1]/*:familyName[1]] in Response
+[gender] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:gender[1]] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:gender[1]] in Response
+[languageCode] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:locale[1]/*:languageCode] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:locale[1]/*:languageCode] in Response
+[email] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:emailAddresses[1]/*:preferredEmailAddress[1]/*:email] in Response
+[campaignType] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:marketingPreference[1]//*:campaignType[1]] in Response
+[communicationChannel] XPathContains assertion failed for path [//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]] : Exception:Missing content for xpath [//*:member[1]/*:person[1]/*:marketingPreference[1]//*:communicationChannel[1]] in Response
+[profileStatus] XPathContains assertion failed for path [//*:member[1]/*:person/*:profileStatus[1]] : Exception:Missing content for xpath [//*:member[1]/*:person/*:profileStatus[1]] in Response
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://api.avios.com
+Method: POST
+StatusCode: 503
+URL: https://api.avios.com/test/v3/memberships?api_key=3vy7tdm6tts5su8b8wfd6v4b
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [api.avios.com]
+Accept-Encoding: [gzip,deflate]
+x-forwarded-for: [111.111.111.111]
+Content-Length: [276]
+Content-Type: [application/json]
+
+POST https://api.avios.com/test/v3/memberships?api_key=3vy7tdm6tts5su8b8wfd6v4b HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+x-forwarded-for: 111.111.111.111
+Content-Length: 276
+Host: api.avios.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+
+---------------- Response --------------------------
+transfer-encoding: [chunked]
+Server: [Mashery Proxy]
+X-Content-Type-Options: [nosniff]
+Connection: [keep-alive]
+Pragma: [no-cache]
+X-Mashery-Message-ID: [348ce17a-da7f-4b54-b920-d22a9703f443]
+X-Application-Context: [REGISTRATIONBSV3:test:10080]
+Date: [Mon, 08 Jan 2018 14:41:31 GMT]
+X-Frame-Options: [DENY]
+Strict-Transport-Security: [max-age=31536000; includeSubDomains]
+Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+X-Cnection: [close]
+Set-Cookie: [JSESSIONID=C3D57C48F92F2862065AC2BFF54A8AE4.jvm_avios0_caravaggio; Path=/registration-bs-3.1/; HttpOnly, TS01f29f44=01af67166242c3a0b92c5a9a895ba3c6ffdc92239c512c11e8138e075df09a908ead232476; Path=/, TS0158aa27=01af671662e2a9a31247e716c4d9055d1da278aafdbe5760865a57b6554be1a8042fbcb8332e18e660c42f8bd73f68380dd1a22827; path=/registration-bs-3.1/]
+Expires: [0]
+#status#: [HTTP/1.1 503 Service Unavailable]
+X-XSS-Protection: [1; mode=block]
+Content-Type: [application/json;charset=UTF-8]
+
+{"code":"SYSTEM_UNAVAILABLE","businessMessage":"System unavailable","developerMessage":"System unavailable","developerLink":"https://developer.avios.com/docs"}
