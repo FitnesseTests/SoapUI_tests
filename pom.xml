@@ -34,7 +34,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>simple-test-soapui-project.xml</projectFile>
+                            <projectFile>Vartotojo-sukurimas.xml</projectFile>
                             <junitReport>true</junitReport>
                             <outputFolder>/Users/Shared/Jenkins/Home/workspace/SoapUI_tests/bin</outputFolder>
                             <projectProperties>
